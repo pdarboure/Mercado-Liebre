@@ -12,7 +12,7 @@ app.listen(PORT, function () {
     console.log("Levantando un servidor con Express");
 })
 
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
     let htmlPath = path.resolve(__dirname,'./views/home.html')
     res.sendFile(htmlPath);
 }); 
