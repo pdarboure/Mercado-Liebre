@@ -11,6 +11,8 @@ app.listen(PORT, function () {
 })
 
 app.use(express.static(path.resolve(__dirname, 'public')));
+
+
 app.get("/", (req, res) => {
     let htmlPath = path.resolve(__dirname,'./views/home.html')
     res.sendFile(htmlPath);
