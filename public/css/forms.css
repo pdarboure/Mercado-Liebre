@@ -1,10 +1,9 @@
-
-
 * {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    display: flexbox;
 }
 
 /* ------------------------------------------ HEAD ------------------------------------------ */
@@ -16,7 +15,7 @@ a {
 header {
     background-color: #EAC926;
     width: 100%;
-    padding-bottom: 3px;
+    padding-bottom: 15px;
 }
 
 .logoHeader {
@@ -24,22 +23,69 @@ header {
     margin-right: 60px;
     margin-top: 20px;
     margin-left: 20px;
+    height: auto;
 }
 
-input{
+.search-bar {
     margin-top: 10px;
     margin-left: 15px;
+    margin-right: 16px;
+    float: right;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+
 }
 
 .header-title {
     text-align: center;
-    font-size: 12px;
     font-weight: lighter;
-    margin-top: 15px;
+    padding: 50px;
 }
 
-ul{
+
+nav {
+
+    height: 80px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    width: 100%;
+}
+
+a {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 0 10px;
+    color: black;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: black;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+ul {
     margin-top: 15px;
+    font-size: 25px;
+
 }
 
 li a {
@@ -51,7 +97,7 @@ li a {
     width: 40px;
     height: 40px;
     margin: 10px auto;
-    background-color: #0022AA;
+    background-color: #1259c3;
     border-radius: 8px;
 }
 
@@ -59,99 +105,136 @@ li a {
     font-size: 25px;
     color: white;
     text-align: center;
-    line-height: 30px; 
+    line-height: 30px;
     margin-left: 9px;
     margin-top: 7px;
 }
 
-.home-banner img{
+.home-banner img {
     width: 100%;
+    margin: 0px;
 }
 
 /* ------------------------------------------ BODY ------------------------------------------*/
-main{
-    width: 90vw;
-    margin:auto;
+
+/* ------------------------------------------ REGISTER ------------------------------------------*/
+
+.body-register {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1vw;
+    background-color: #EAC926;
     text-align: center;
 }
 
-form{
-    border: solid 1px rgb(100, 100, 100);
-    padding: 5px;
-    margin-top: 10px;
+.create-form {
+    padding: 20px 15px;
+    border: solid black;    
 }
 
-button .enviar:hover{
-    background-color: #0022AA;
-} 
-
-/* .main-title{
-    font-size: 16px;
-    text-align: left;
-    margin-top: 12px;
+.control-formulario {
+    margin-bottom: 15px;
 }
 
-article{
-    margin-top: 10px;
-    border: solid 1px #ebebeb;
-}
-
-img {
-    width: 30%;
-}
-
-.descripciones{
-    text-align: left;
-    border-top: solid 1px #ebebeb;
-    padding: 15px;
-} */
-
-/* article div i{
-    position: relative;
-} */
-
-/* camioncito envio */
-/* main section article i{
-    color: #39b54a;
+.control-formulario label {
+    margin-bottom: 5px;
     display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    right: 20px;
-    top: -15px;
+   
 }
 
-.precio{
-    font-size: 18px;
+.control {
+    width: 350px;
+    padding: 8px 8px;
+
 }
 
-.descuento{
-    font-size: 16px;
-    color: #39b54a;
-    margin-left: 8px;
+.boton-formulario {
+    background-color: blue;
+    border: none;
+    font-size: 20px;
+    color: #ffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 41px;
+    
 }
 
-.precio-descuento{
+/* ------------------------------------------ lOGIN ------------------------------------------*/
+
+.body-login {
     display: flex;
-    margin-top: 5px;
+    align-items: center;
+    flex-direction: column;
+    padding: 1vw;
+    background-color: #EAC926;
 }
 
-article h4{
-    margin-top: 5px;
-} */
+.form-body {
+    width: 350px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    border: solid 2px black;
+}
+
+.text {
+    font-size: 1.5rem;
+    font-size: large;
+    color: black;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.name-login {
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.input-login {
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 75%;
+    padding-left: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: solid 2px black;
+}
+
+.form-body input .input-login:hover {
+    transition: 8s;
+    border: solid #eeff01;
+    color: rgb(74, 72, 72);
+}
+
+.form-body button {
+    border-radius: 10px;
+    background-color:blue;
+    padding: 5px 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 40px;
+    width: 78%;
+    font-size: large;
+}
+
+.form-body button:hover {
+    color: wheat;
+}
+
+
 
 /* ------------------------------------------ FOOTER ------------------------------------------ */
 
-footer{
+footer {
     margin-top: 25px;
     text-align: center;
 }
 
-.footer-icons{
+.footer-icons {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -163,53 +246,108 @@ footer{
     margin-top: 20px;
 }
 
-p{
+p {
     font-size: 12px;
 }
 
-.copyright{
-    margin-top: 20px;
+.copyright {
+    margin-top: 40px;
     margin-bottom: 15px;
     margin-left: 10px;
-    text-align: left;
-    font-size: 10px;
+    text-align: center;
+    font-size: 15px;
 }
 
-footer section h3{
+footer section h3 {
     font-size: 16px;
 }
 
 /* ------------------------- BREAKPOINTS - MEDIA QUERIES --------------------*/
 /* MOBILE */
-@media (max-width: 360px){
-    /* .descripciones h4{
-        display: none;
-    } */
+@media (max-width: 1024px) {
     nav {
         display: none;
     }
 }
 
 /* TABLETS */
-@media (min-width: 361px){
-    /* .all-articles{
+@media (min-width: 1024px) {
+    top-header {
         display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
-    article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    } */
-    .burger-menu{
-        display: none;
+
+    .lista1 {
+        display: flex;
+        justify-content: flex-start;
+        justify-content: space-around;
+
+        list-style-type: none;
+    }
+
+    .lista2 {
+        display: flex;
+        justify-content: flex-end;
+        justify-content: space-around;
+
+        list-style-type: none;
+    }
+
+    .nav-buttons1 {
+        margin-right: 8px;
+    }
+
+    .nav-buttons2 {
+        margin-left: 8px;
+    }
+
+    header nav ul a {
+        margin: 8px;
+    }
+
+    .all-articles {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    article {
+        width: 40vw;
     }
 }
 
 /* DESKTOP */
-@media (min-width: 769px){
-    /* .all-articles{
+@media (min-width: 1024px) {
+    article {
+        width: 20vw;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .all-articles {
         display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-    } */
+    }
+
+    footer section {
+        display: flex;
+    }
+
+    .footer section {
+        width: 25vw;
+    }
+
+    footer i:hover {
+        color: grey;
+    }
+
+    .footer-article {
+        padding: 40px;
+    }
 }

@@ -266,7 +266,7 @@ footer section h3 {
 
 /* ------------------------- BREAKPOINTS - MEDIA QUERIES --------------------*/
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     nav {
         display: none;
     }
@@ -334,7 +334,7 @@ footer section h3 {
     }
 
     .all-articles {
-        display: flex;    
+        display: flex;
     }
 
     footer section {
