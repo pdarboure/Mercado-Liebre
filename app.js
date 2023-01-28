@@ -4,22 +4,13 @@ let app = express()
 
 let path = require("path")
 
-const { Http2ServerRequest } = require("http2");
-
 const PORT = process.env.PORT || 8000;
 
-app.use(express.static(path.resolve(__dirname, 'public')));
+const mainRouter = require("./routes/routerProducts")
 
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname,'./views/home.html'));
-}); 
-app.get("/login", (req, res) => {
-    res.sendFile(path.resolve(__dirname,'./views/login.html'));
-}); 
-app.get("/register", (req, res) => {
-    res.sendFile(path.resolve(__dirname,'./views/register.html'));
-}); 
+app.use(express.static('public'));
 
+app.use(mainRouter)
 
 app.listen(PORT, function () {
     console.log("Levantando el servidor " + PORT);
