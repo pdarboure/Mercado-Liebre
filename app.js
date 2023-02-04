@@ -13,5 +13,5 @@ app.use(express.static('public'));
 app.use(mainRouter)
 
 app.listen(PORT, function () {
-    console.log("Levantando el servidor " + PORT);
+    console.log("Levantando el servidor http://localhost:" + PORT);
 })
